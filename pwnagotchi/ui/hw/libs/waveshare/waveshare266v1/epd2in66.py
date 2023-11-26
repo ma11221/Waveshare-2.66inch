@@ -1,5 +1,5 @@
 # *****************************************************************************
-# * | File        :	  epd2in13_V3.py
+# * | File        :	  epd2in66.py
 # * | Author      :   Waveshare team
 # * | Function    :   Electronic paper driver
 # * | Info        :
