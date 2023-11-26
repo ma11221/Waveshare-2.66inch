@@ -1,2 +1,38 @@
 # Waveshare-2.66inch
-Add support for 2.66inch e-Paper Module to Pwnagotchi
+Add support for 2.66inch e-Paper Module to Pwnagotchi 1.5.5
+
+Changed Files
+/usr/local/lib/python3.7/dist-packages/pwnagotchi/
+utils.py
+add this into code line 235 for orientation
+    elif config['ui']['display']['type'] in ('Waveshare266v1','waveshare266v1'):
+        config['ui']['display']['type'] = 'waveshare266v1'
+or copy the file if you dont have any custom configuration
+/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui
+
+display.py
+add this into code line 28 for orientation
+    def is_waveshare266v1(self):
+        return self._implementation.name == 'waveshare266v1'
+or copy the file if you dont have any custom configuration
+
+/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw
+
+__init__.py
+add this into code line 16 for orientation
+from pwnagotchi.ui.hw.waveshare266v1 import waveshare266v1
+
+add this into code line 66 for orientation
+    elif config['ui']['display']['type'] == 'waveshare266v1':
+        return waveshare266v1(config)
+or copy the file if you dont have any custom configuration
+
+added waveshare266v1.py
+copy the file into /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw
+
+/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw/libs/waveshare/waveshare266v1
+make this folder waveshare266v1 in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw/libs/waveshare/
+copy this files into the folder
+__init__.py
+epd2in66.py
+epdconfig.py
