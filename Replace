@@ -33,6 +33,6 @@ copy the file into /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw
 /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw/libs/waveshare/waveshare266v1
 make this folder waveshare266v1 in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/hw/libs/waveshare/
 copy this files into the folder
-__init__.py
+__init__.py - just make this file
 epd2in66.py
 epdconfig.py
